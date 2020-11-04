@@ -26,7 +26,18 @@ INSERT INTO photos (image_url, user_id) VALUES
 ('/lkajsd98', 2),
 ('/90jddlkj', 2);
 
-SELECT photos
-FROM photos
-JOIN users
-  ON photos.user_id = user.id;
+-- SELECT photos
+-- FROM photos
+-- JOIN users
+--   ON photos.user_id = user.id;
+
+CREATE TABLE comments (
+  id INTEGER AUTO_INCREMENT PRIMARY KEY,
+  coment_text VARCHAR(255) NOT NULL,
+  photo_id INTEGER NOT NULL,
+  user_id INTEGER NOT NULL,
+  create_at TIMESTAMP DEFAULT NOW(),
+  FOREIGN KEY(user_id) REFERENCES users(id),
+  FOREIGN KEY(photo_id) REFERENCES photos(id),
+  FOREIGN KEY(user_id) REFERENCES users(id)
+);
