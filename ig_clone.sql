@@ -54,3 +54,10 @@ CREATE TABLE likes (
   FOREIGN KEY(photo_id) REFERENCES photos(id),
   PRIMARY KEY (user_id, photo_id)
 );
+
+INSERT INTO likes(user_id, photo_id) VALUES
+(1,1),
+(2,1),
+(1,2),
+(1,3),
+(3,3);
