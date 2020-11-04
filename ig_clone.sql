@@ -20,3 +20,13 @@ CREATE TABLE photos (
   create_at TIMESTAMP DEFAULT NOW(),
   FOREIGN KEY(user_id) REFERENCES users(id)
 );
+
+INSERT INTO photos (image_url, user_id) VALUES
+('/alskjd76', 1),
+('/lkajsd98', 2),
+('/90jddlkj', 2);
+
+SELECT photos
+FROM photos
+JOIN users
+  ON photos.user_id = user.id;
