@@ -1,3 +1,6 @@
+-- create by Tao Chen
+-- instgram simple database clone on users, photo, comment, lieks, follows, tags, photo_tags table and its relationship.
+
 DROP DATABASE ig_clone;
 CREATE DATABASE ig_clone;
 USE ig_clone;
