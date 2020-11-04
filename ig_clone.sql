@@ -1,4 +1,5 @@
-CREATE DATABASE ig_clones;
+DROP DATABASE ig_clone;
+CREATE DATABASE ig_clone;
 USE ig_clone;
 
 CREATE TABLE USERS (
@@ -6,3 +7,9 @@ CREATE TABLE USERS (
     username VARCHAR(255) UNIQUE,
     created_at TIMESTAMP DEFAULT NOW()
 );
+
+
+INSERT INTO users (username) VALUES
+('BlueTheCat'),
+('CharlieBrown'),
+('ColtSteele');
